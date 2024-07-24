@@ -1,6 +1,6 @@
 {
   "name": "secure-chat_discord",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "personal project to Develop a plug in for discord  with E2E encyption",
   "main": "src/index.js",
   "scripts": {

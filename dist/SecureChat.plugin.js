@@ -3,7 +3,7 @@
  * @description A plugin for Discord that uses the  BetterDiscord framework that adds end-to-end encryption to direct messages, ensuring privacy and security for private messages between users.
  * @author Ethan Cha, Daniel Willard
  * @source https://github.com/DJ-Willard/Secure-Chat_discord
- * @version 1.0.1
+ * @version 1.0.2
  */
 /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
@@ -820,7 +820,7 @@ __webpack_require__.r(__webpack_exports__);
 const pluginDirectory = BdApi.Plugins.folder + "/SecureChat";
 
 function createElements() {
-    const filter = BdApi.Webpack.Filters.byStrings(".default.isSubmitButtonEnabled", ".default.getActiveCommand");
+    const filter = BdApi.Webpack.Filters.byStrings(".Z.isSubmitButtonEnabled", ".Z.getActiveCommand");
     const ChannelTextAreaButtons = BdApi.Webpack.getModule(m => filter(m.type));
     BdApi.Patcher.after("debug", ChannelTextAreaButtons, "type", (_, __, res) => {
         const myElement = BdApi.React.createElement(_components_PluginButtons__WEBPACK_IMPORTED_MODULE_2__["default"]);

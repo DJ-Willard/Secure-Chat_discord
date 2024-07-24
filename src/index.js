@@ -5,7 +5,7 @@ import PluginButtons from "./components/PluginButtons";
 const pluginDirectory = BdApi.Plugins.folder + "/SecureChat";
 
 function createElements() {
-    const filter = BdApi.Webpack.Filters.byStrings(".default.isSubmitButtonEnabled", ".default.getActiveCommand");
+    const filter = BdApi.Webpack.Filters.byStrings(".Z.isSubmitButtonEnabled", ".Z.getActiveCommand");
     const ChannelTextAreaButtons = BdApi.Webpack.getModule(m => filter(m.type));
     BdApi.Patcher.after("debug", ChannelTextAreaButtons, "type", (_, __, res) => {
         const myElement = BdApi.React.createElement(PluginButtons);
